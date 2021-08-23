@@ -212,33 +212,33 @@ public class Main {
 
             /// -- Assinantes do B
             if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") <= 0) {
-                vContadorA++;
+                vContadorB++;
             }
 
             /// -- Assinantes do BC
             if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") >= 0) {
-                vContadorAB++;
+                vContadorBC++;
             }
             //------------------------------------------------------------------------------------------------
-
 
             /// -- Assinantes do C
             if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") <= 0 && vResposta.indexOf("C") >= 0) {
                 vContadorC++;
             }
+            //------------------------------------------------------------------------------------------------
 
-            /// -- Assinantes do BC
-            if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") >= 0) {
-                vContadorAB++;
+            /// -- Assinantes do ABC
+            if (vResposta.indexOf("A") >= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") >= 0) {
+                vContadorABC++;
             }
             //------------------------------------------------------------------------------------------------
         }
 
         System.out.println("#########################################");
-        System.out.println("### Total Assinantes dos 3 Jornais - " + (vContadorA + vContadorB + vContadorC) + " ####");
-        System.out.println("### Total Assinantes Diarios AC    - " + (vContadorA +  vContadorC) + " ####");
-        System.out.println("### Total Assinantes Diarios AB    - " + (vContadorA + vContadorB) + " ####");
-        System.out.println("### Total Assinantes Diarios BC    - " + (vContadorB + vContadorC) + " ####");
+        System.out.println("### Total Assinantes dos 3 Jornais - " + (vContadorABC) + " ####");
+        System.out.println("### Total Assinantes Diarios AC    - " + (vContadorAC) + " ####");
+        System.out.println("### Total Assinantes Diarios AB    - " + (vContadorAB) + " ####");
+        System.out.println("### Total Assinantes Diarios BC    - " + (vContadorBC) + " ####");
         System.out.println("### Total Assinantes Diarios A     - " + vContadorA + " ####");
         System.out.println("#########################################");
 

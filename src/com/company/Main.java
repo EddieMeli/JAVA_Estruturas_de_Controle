@@ -186,7 +186,7 @@ public class Main {
                 vContadorBC = 0,
                 vContadorC = 0;
 
-        for(int i=1;i<=50;i++){
+        for(int i=1;i<=5;i++){
             System.out.printf("Digite o Jornal do Leitor " + i + " Ex. ABC:");
             //-- Captura da Fabrica
             Scanner scanner = new Scanner(System.in);
@@ -195,40 +195,40 @@ public class Main {
             String vResposta = scanner.next().toUpperCase();
 
             /// -- Assinantes do A
-            if (vResposta.indexOf("A") >= 0 && vResposta.indexOf("B") <= 0 && vResposta.indexOf("C") <= 0) {
+            if (vResposta.indexOf("A") > 0 && vResposta.indexOf("B") < 0 && vResposta.indexOf("C") < 0) {
                 vContadorA++;
             }
 
             /// -- Assinantes do AB
-            if (vResposta.indexOf("A") >= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") <= 0) {
+            if (vResposta.indexOf("A") > 0 && vResposta.indexOf("B") > 0 && vResposta.indexOf("C") < 0) {
                 vContadorAB++;
             }
 
             /// -- Assinantes do AC
-            if (vResposta.indexOf("A") >= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") <= 0) {
+            if (vResposta.indexOf("A") > 0 && vResposta.indexOf("B") < 0 && vResposta.indexOf("C") > 0) {
                 vContadorAC++;
             }
             //------------------------------------------------------------------------------------------------
 
             /// -- Assinantes do B
-            if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") <= 0) {
+            if (vResposta.indexOf("A") < 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") < 0) {
                 vContadorB++;
             }
 
             /// -- Assinantes do BC
-            if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") >= 0) {
+            if (vResposta.indexOf("A") < 0 && vResposta.indexOf("B") > 0 && vResposta.indexOf("C") > 0) {
                 vContadorBC++;
             }
             //------------------------------------------------------------------------------------------------
 
             /// -- Assinantes do C
-            if (vResposta.indexOf("A") <= 0 && vResposta.indexOf("B") <= 0 && vResposta.indexOf("C") >= 0) {
+            if (vResposta.indexOf("A") < 0 && vResposta.indexOf("B") < 0 && vResposta.indexOf("C") >= 0) {
                 vContadorC++;
             }
             //------------------------------------------------------------------------------------------------
 
             /// -- Assinantes do ABC
-            if (vResposta.indexOf("A") >= 0 && vResposta.indexOf("B") >= 0 && vResposta.indexOf("C") >= 0) {
+            if (vResposta.indexOf("A") > 0 && vResposta.indexOf("B") > 0 && vResposta.indexOf("C") > 0) {
                 vContadorABC++;
             }
             //------------------------------------------------------------------------------------------------
@@ -236,10 +236,16 @@ public class Main {
 
         System.out.println("#########################################");
         System.out.println("### Total Assinantes dos 3 Jornais - " + (vContadorABC) + " ####");
-        System.out.println("### Total Assinantes Diarios AC    - " + (vContadorAC) + " ####");
+        System.out.println("### Total Assinantes Diarios A     - " + vContadorA + "  ####");
         System.out.println("### Total Assinantes Diarios AB    - " + (vContadorAB) + " ####");
+        System.out.println("### Total Assinantes Diarios AC    - " + (vContadorAC) + " ####");
+
+
         System.out.println("### Total Assinantes Diarios BC    - " + (vContadorBC) + " ####");
-        System.out.println("### Total Assinantes Diarios A     - " + vContadorA + " ####");
+        System.out.println("### Total Assinantes Diarios B     - " + vContadorB + " ####");
+
+
+        System.out.println("### Total Assinantes Diarios CS     - " + vContadorC + " ####");
         System.out.println("#########################################");
 
         System.out.println("########## FIM - Exercicio 04 ########## ");
